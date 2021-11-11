@@ -1,0 +1,19 @@
+body {
+    background-color: #eee;
+    height: 100vh;
+}
+
+.accordion .box .label {
+    cursor: pointer;
+}
+
+.accordion .box .content {
+    height: 0;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.accordion .box.active .content {
+    height: 100px;
+    padding: 10px;
+}
