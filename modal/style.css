@@ -9,7 +9,7 @@
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-.m-container {
+.modal-container {
     position: fixed;
     width: 80%;
     top: 10%;
@@ -18,8 +18,8 @@
     border: 2px solid rgb(199, 62, 233);
 }
 
-.m-header,
-.m-footer {
+.modal-header,
+.modal-footer {
     background-color: rgb(195, 106, 218);
     padding: 2rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -36,7 +36,7 @@
     cursor: pointer;
 }
 
-.-body {
+.modal-body {
     padding: 2rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
