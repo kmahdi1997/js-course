@@ -1,3 +1,12 @@
 .tabs {
   min-height: 100vh;
 }
+
+.tabPanels .panel {
+  display: none;
+}
+
+.tabActive {
+  background-color: red;
+  display: inline-block;
+}

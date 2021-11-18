@@ -23,18 +23,32 @@
 //   console.log(tabPanels);
 
 
-var tabButtons = document.querySelectorAll(".tab .tabButtons .buttons button");
-var tabPanels = document.querySelectorAll(".tab .tabPanels .panels");
+// var tabButtons = document.querySelectorAll(".tab .tabButtons .buttons button");
+// var tabPanels = document.querySelectorAll(".tab .tabPanels .panels");
 
-function showPanel(panelIndex, colorCode) {
-  tabButtons.forEach(function(node){
-    node.style.backgroundColor="";
+// function showPanel(panelIndex, colorCode) {
+//   tabButtons.forEach(function(node){
+//     node.style.backgroundColor="";
+//   });
+//   tabButtons[panelIndex].style.backgroundColor = colorCode;
+//   tabButtons[panelIndex].style.color = "yellow";
+//   tabPanels.forEach(function(node){
+//     node.style.display="none"
+//   });
+//   tabPanels[panelIndex].style.display = "block";
+//   tabPanels[panelIndex].style.backgroundColor = "colorCode";
+// }
+
+
+let tabBtn = document.getElementsByClassName("btn");
+let tabBtns = document.getElementsByClassName("buttons")[0];
+let tabPanel = document.getElementsByClassName("tabPanels")[0];
+
+for (let i = 0; i < tabBtn.length; i++) {
+  tabBtn[i].addEventListener("click", function(){
+    tabBtns.getElementsByClassName("active")[0].classList.remove("active");
+    tabBtn[i].classList.add("active");
+    tabPanel.getElementsByClassName("tabActive")[0].classList.remove("tabActive");
+    tabPanel.getElementsByClassName("btn")[i].classList.add("tabActive");
   });
-  tabButtons[panelIndex].style.backgroundColor = colorCode;
-  tabButtons[panelIndex].style.color = "yellow";
-  tabPanels.forEach(function(node){
-    node.style.display="none"
-  });
-  tabPanels[panelIndex].style.display = "block";
-  tabPanels[panelIndex].style.backgroundColor = "colorCode";
 }
